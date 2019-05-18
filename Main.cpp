@@ -32,7 +32,7 @@ struct VendingMachineItems
 
 int main()
 {
-
+	// All items inside vending machine
 	std::vector<VendingMachineItems> VendingItems;
 	VendingItems.push_back(VendingMachineItems(0, "Gatorade", 6.50));
 	VendingItems.push_back(VendingMachineItems(1, "Coca Cola", 4.50));
@@ -57,6 +57,7 @@ int main()
 
 		if (ChosenItem >= 0 && ChosenItem < VendingItems.capacity())
 		{
+			// Purchasing System
 			std::cout << "Your choice: " << VendingItems[ChosenItem].m_DrinkID << " and the price is: " << VendingItems[ChosenItem].m_DrinkCost;
 			std::cout << " Please Insert Money: " << std::endl;
 			std::cin >> Payment;
@@ -66,10 +67,10 @@ int main()
 		}
 
 		std::cout << " Thank you for your purchase!" << std::endl;
+		// System to purchase another item
 		std::string WantAnotherItem;
 		std::cout << " Do you want another item? (Y/N)" << std::endl;
 		std::cin >> WantAnotherItem;
-
 		if (WantAnotherItem == "n" || WantAnotherItem == "N")
 		{
 			std::cout << "Thank you for your purchase!" << std::endl;
